@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/radioplayer_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="一个人要像一支队伍"
+        android:textSize="20dp"
+        android:textColor="@color/BLACK"
+        android:background="@color/WHITE"/>
+
+    <TextView
+        android:id="@+id/radioplayer_description_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="作者： 鲤鱼    主播： 留儿"
+        android:textSize="14dp"
+        android:textColor="@color/GRAY"
+        android:background="@color/WHITE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/radioplayer_current_textview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:gravity="right"/>
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/radioplayer_seekbar"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/radioplayer_end_textview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="00:00"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/raioplayer_playorpause_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/yellow_circle"
+        />
+
+</LinearLayout>
