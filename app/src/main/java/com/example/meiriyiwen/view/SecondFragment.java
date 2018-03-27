@@ -3,6 +3,7 @@ package com.example.meiriyiwen.view;
 import android.animation.IntEvaluator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
@@ -73,7 +74,12 @@ public class SecondFragment extends Fragment {
         adapter.setmListner(new RecyclerClickListner<RadioRacyclerViewAdapter.ViewHolder>() {
             @Override
             public void onClickListner(final RadioRacyclerViewAdapter.ViewHolder viewHolder, int position) {
-
+                Intent intent = new Intent(getContext(),RadioPlayActivity.class);
+                intent.putExtra("vid",tagList.get(position).getIssuse());
+                intent.putExtra("title",tagList.get(position).getTitle());
+                intent.putExtra("imageUrl", tagList.get(position).getImageURL());
+                intent.putExtra("description","作者："+tagList.get(position).getAuthor()+" 主播："+tagList.get(position).getAnchor());
+                startActivity(intent);
             }
         });
 

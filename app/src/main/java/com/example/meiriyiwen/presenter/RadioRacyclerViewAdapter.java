@@ -68,7 +68,7 @@ public class RadioRacyclerViewAdapter extends RecyclerView.Adapter<RadioRacycler
         holder.issuse.setText(tag.getIssuse()+"期");
         Glide.with(context).load(tag.getImageURL()).into(holder.imageView);
 
-        if(mListner != null) {
+        if(mListner != null && !holder.view.hasOnClickListeners()) {
             holder.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

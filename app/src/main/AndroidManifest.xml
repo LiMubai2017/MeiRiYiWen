@@ -18,7 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.SecondActivity"></activity>
+        <activity android:name=".view.RadioPlayActivity" />
+
+        <service
+            android:name=".model.RadioService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

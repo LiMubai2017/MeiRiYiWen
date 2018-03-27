@@ -169,7 +169,7 @@ public class Utilities {
         int r = resource.indexOf("=&");
         resource = resource.substring(l+4,r);
         try {
-            resource = new String(Base64.decode("aHR0cDovL3N0YXRpYy5tZWlyaXlpd2VuLmNvbS8yMDE3MDIwOS5tcDM",Base64.DEFAULT));
+            resource = new String(Base64.decode(resource,Base64.DEFAULT));
         } catch (Exception e) {
             e.printStackTrace();
         }
