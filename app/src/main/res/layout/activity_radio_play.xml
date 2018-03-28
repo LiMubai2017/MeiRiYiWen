@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"/>
 
-        <com.example.meiriyiwen.model.RadioPlayer
+        <com.example.meiriyiwen.radioplayer.RadioPlayer
             android:id="@+id/mradioplayer"
             android:layout_width="0dp"
             android:layout_weight="14"
