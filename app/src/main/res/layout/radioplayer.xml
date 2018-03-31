@@ -86,7 +86,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/loading"
+                android:background="@drawable/loading2"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="20dp"
                 />
@@ -97,6 +97,7 @@
                 android:layout_height="wrap_content"
                 android:scaleX="1.8"
                 android:scaleY="1.8"
+                android:indeterminateTint="@color/PROGRESS"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="26dp"/>

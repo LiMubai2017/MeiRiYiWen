@@ -1,64 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/catelog_toolbar"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="目录"></android.support.v7.widget.Toolbar>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/catelog_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="目录"></android.support.v7.widget.Toolbar>
 
-        <ImageView
-            android:id="@+id/catelog_iamgeview"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="3"
-            android:scaleType="fitCenter" />
+
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="4"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/catelog_title_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="34dp"
-                android:gravity="left"
-                android:paddingLeft="10dp"
-                android:text="啦啦啦"
-                android:textSize="22dp" />
+            <ImageView
+                android:id="@+id/catelog_iamgeview"
+                android:layout_width="120dp"
+                android:layout_height="164dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="20dp"
+                android:transitionName="catelog_imageview"
+                />
 
-            <TextView
-                android:id="@+id/catelog_author_textview"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="left"
-                android:paddingLeft="10dp"
-                android:text="啦啦啦"
-                android:textSize="16dp" />
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/catelog_title_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/BLACK"
+                    android:text="大众读者"
+                    android:layout_marginTop="20dp"
+                    android:transitionName="catelog_title"/>
+
+                <TextView
+                    android:id="@+id/catelog_author_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textColor="@color/BLACK"
+                    android:text="大众读者"
+                    android:layout_marginTop="10dp"
+                    android:transitionName="catelog_author"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
+
+        <ListView
+            android:id="@+id/catelog_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
     </LinearLayout>
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/catelog_starbutton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/white_star"
+        android:backgroundTint="@color/YELLOW"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"/>
 
-
-    <ListView
-        android:id="@+id/catelog_listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
-
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

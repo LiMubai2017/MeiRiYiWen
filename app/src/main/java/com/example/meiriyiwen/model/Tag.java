@@ -11,6 +11,15 @@ public class Tag {
     private int issuse;
     private String imageURL;
     private String bid;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public String getBid() {
         return bid;

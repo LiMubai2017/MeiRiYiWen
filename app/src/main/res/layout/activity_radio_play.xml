@@ -1,52 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/radio_play_imageview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="fitCenter"/>
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:transitionName="radio_image" />
+
+    <ImageView
+        android:id="@+id/radio_play_backimage"
+        android:src="@drawable/icon_arrow_left"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
-        android:textSize="22dp"
+        android:layout_marginLeft="50dp"
         android:text="播 放"
-        android:textColor="@color/BLACK"/>
+        android:textColor="@color/WHITE"
+        android:textSize="22dp" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <com.example.meiriyiwen.radioplayer.RadioPlayer
             android:id="@+id/mradioplayer"
             android:layout_width="0dp"
-            android:layout_weight="14"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_weight="14" />
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
     </LinearLayout>
 
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/radioactivity_star_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"
+        android:background="@color/YELLOW"
+        android:backgroundTint="@color/YELLOW"
+        android:src="@drawable/white_star"
+        app:rippleColor="@color/YELLOW" />
 
 </FrameLayout>

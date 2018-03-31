@@ -5,5 +5,6 @@ package com.example.meiriyiwen.model;
  */
 
 public interface RecyclerClickListner<type> {
-    void onClickListner(type viewHolder, int position);
+    void onClick(type viewHolder, int position);
+    void onLongClick(type viewHolder, int position);
 }

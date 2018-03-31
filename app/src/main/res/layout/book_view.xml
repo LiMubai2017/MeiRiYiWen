@@ -7,7 +7,8 @@
         android:layout_width="120dp"
         android:layout_height="164dp"
         android:scaleType="centerCrop"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:transitionName="catelog_imageview"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -23,7 +24,8 @@
             android:textSize="20dp"
             android:textColor="@color/BLACK"
             android:text="大众读者"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:transitionName="catelog_title"/>
 
         <TextView
             android:id="@+id/bookshelf_author_textview"
@@ -32,7 +34,8 @@
             android:textSize="14dp"
             android:textColor="@color/BLACK"
             android:text="大众读者"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:transitionName="catelog_author"/>
 
     </LinearLayout>
 
